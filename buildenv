@@ -10,5 +10,7 @@ fi
 export ZOPEN_ROOT="${PWD}"
 export ZOPEN_TYPE="GIT"
 export ZOPEN_GIT_URL="https://github.com/libexpat/libexpat"
-export ZOPEN_GIT_DEPS="git make m4 perl autoconf automake help2man makeinfo xz zlib openssl curl gettext"
+export ZOPEN_GIT_DEPS="git make m4 perl autoconf automake libtool help2man makeinfo xz zlib openssl curl gettext"
 export ZOPEN_BOOTSTRAP="./buildconf.sh"
+
+export ZOPEN_SRC_DIR=expat
