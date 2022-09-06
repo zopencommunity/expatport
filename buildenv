@@ -8,3 +8,9 @@ export ZOPEN_GIT_DEPS="git make m4 perl autoconf automake libtool help2man makei
 export ZOPEN_BOOTSTRAP="./buildconf.sh"
 
 export ZOPEN_SRC_DIR=expat
+
+zopen_check_results()
+{
+  return 3
+}
+
