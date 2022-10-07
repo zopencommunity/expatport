@@ -1,0 +1,24 @@
+diff --git a/lib/Makefile.in b/lib/Makefile.in
+index 34bd215..01c0b0d 100644
+--- a/lib/Makefile.in
++++ b/lib/Makefile.in
+@@ -409,9 +409,7 @@ lib_LTLIBRARIES = libexpat.la
+ noinst_LTLIBRARIES = libexpatinternal.la
+ libexpat_la_LDFLAGS = \
+     @AM_LDFLAGS@ \
+-    @LIBM@ \
+-    -no-undefined \
+-    -version-info @LIBCURRENT@:@LIBREVISION@:@LIBAGE@
++    @LIBM@
+ 
+ libexpat_la_SOURCES = 
+ 
+@@ -528,7 +526,7 @@ clean-noinstLTLIBRARIES:
+ 	}
+ 
+ libexpat.la: $(libexpat_la_OBJECTS) $(libexpat_la_DEPENDENCIES) $(EXTRA_libexpat_la_DEPENDENCIES) 
+-	$(AM_V_CCLD)$(libexpat_la_LINK) -rpath $(libdir) $(libexpat_la_OBJECTS) $(libexpat_la_LIBADD) $(LIBS)
++	$(AM_V_CCLD)$(libexpat_la_LINK) $(libdir) $(libexpat_la_OBJECTS) $(libexpat_la_LIBADD) $(LIBS)
+ 
+ libexpatinternal.la: $(libexpatinternal_la_OBJECTS) $(libexpatinternal_la_DEPENDENCIES) $(EXTRA_libexpatinternal_la_DEPENDENCIES) 
+ 	$(AM_V_CCLD)$(LINK)  $(libexpatinternal_la_OBJECTS) $(libexpatinternal_la_LIBADD) $(LIBS)
