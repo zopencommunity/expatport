@@ -22,3 +22,16 @@ index 34bd215..01c0b0d 100644
  
  libexpatinternal.la: $(libexpatinternal_la_OBJECTS) $(libexpatinternal_la_DEPENDENCIES) $(EXTRA_libexpatinternal_la_DEPENDENCIES) 
  	$(AM_V_CCLD)$(LINK)  $(libexpatinternal_la_OBJECTS) $(libexpatinternal_la_LIBADD) $(LIBS)
+diff --git a/conftools/ltmain.sh b/conftools/ltmain.sh
+index 0e501e7..25c6c55 100644
+--- a/conftools/ltmain.sh
++++ b/conftools/ltmain.sh
+@@ -4608,7 +4608,7 @@ func_mode_install ()
+ 	# Install the pseudo-library for information purposes.
+ 	func_basename "$file"
+ 	name=$func_basename_result
+-	instname=$dir/${name}i
++	instname=$dir/${name}
+ 	func_show_eval "$install_prog $instname $destdir/$name" 'exit $?'
+ 
+ 	# Maybe install the static library, too.
