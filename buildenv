@@ -12,6 +12,15 @@ export AWK="/bin/awk"
 
 zopen_check_results()
 {
-  return 3 # non-functional
+chk="$2_check.log"
+
+failures=$(egrep '^# FAIL:|^# ERROR:|^# XFAIL' ${chk} | awk '{sum+=$3;} END{print sum;}')
+totalTests=$(egrep '^# ERROR:|^# PASS:|^# XFAIL:|^# FAIL:|^# XPASS:' ${chk} | awk '{sum+=$3;} END{print sum;}')
+
+cat <<ZZ
+actualFailures:$failures
+totalTests:$totalTests
+expectedFailures:0
+ZZ
 }
 
