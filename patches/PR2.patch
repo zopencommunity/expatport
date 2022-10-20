@@ -1,0 +1,14 @@
+diff --git a/configure b/configure
+index edbff6d..c41ad7f 100755
+--- a/configure
++++ b/configure
+@@ -215,7 +215,7 @@ do
+   as_found=:
+   case $as_dir in #(
+         /*)
+-          for as_base in sh bash ksh sh5; do
++          for as_base in sh ksh sh5; do
+             # Try only shells that exist, to save several forks.
+             as_shell=$as_dir$as_base
+             if { test -f "$as_shell" || test -f "$as_shell.exe"; } &&
+
