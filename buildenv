@@ -1,18 +1,16 @@
-#!/bin/sh
 #
 # Set up environment variables for general build tool to operate
 #
 export ZOPEN_TYPE="GIT"
 export ZOPEN_GIT_URL="https://github.com/libexpat/libexpat"
-export ZOPEN_GIT_DEPS="git make m4 perl autoconf automake libtool help2man makeinfo xz zlib openssl curl gettext"
+export ZOPEN_GIT_DEPS="git make m4 perl autoconf automake libtool help2man makeinfo xz zlib openssl curl gettext gawk"
 export ZOPEN_TARBALL_URL="https://github.com/libexpat/libexpat/releases/download/R_2_4_9/expat-2.4.9.tar.gz"
 export ZOPEN_TARBALL_DEPS="make curl coreutils"
 export ZOPEN_TYPE="TARBALL"
-export AWK="/bin/awk"
 
 zopen_check_results()
 {
-chk="$2_check.log"
+chk="$1/$2_check.log"
 
 failures=$(egrep '^# FAIL:|^# ERROR:|^# XFAIL' ${chk} | awk '{sum+=$3;} END{print sum;}')
 totalTests=$(egrep '^# ERROR:|^# PASS:|^# XFAIL:|^# FAIL:|^# XPASS:' ${chk} | awk '{sum+=$3;} END{print sum;}')
