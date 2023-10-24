@@ -2,12 +2,11 @@
 EXPAT_VERSION="2.4.9"
 EXPAT_UNDER="$(echo "$EXPAT_VERSION" | sed -e "s#\.#_#g")"
 
-export ZOPEN_BUILD_LINE="DEV"
-export ZOPEN_DEV_URL="https://github.com/libexpat/libexpat"
+export ZOPEN_BUILD_LINE="STABLE"
+export ZOPEN_DEV_URL="https://github.com/libexpat/libexpat.git"
 export ZOPEN_DEV_DEPS="git make m4 perl autoconf automake libtool help2man texinfo xz zlib openssl curl gettext gawk zoslib bash"
 export ZOPEN_STABLE_URL="https://github.com/libexpat/libexpat/releases/download/R_${EXPAT_UNDER}/expat-${EXPAT_VERSION}.tar.gz"
 export ZOPEN_STABLE_DEPS="make curl coreutils zoslib bash"
-export ZOPEN_TYPE="TARBALL"
 
 zopen_check_results()
 {
