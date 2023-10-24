@@ -1,6 +1,6 @@
 # bump: expat-version /EXPAT_VERSION="(.*)"/ gitrefs:https://github.com/libexpat/libexpat.git|re:/R_([\d_]+)/$1/|re:/_/./|sort
 EXPAT_VERSION="2.4.9"
-EXPAT_UNDER=${EXPAT_VERSION//./_}
+EXPAT_UNDER="$(echo "$EXPAT_VERSION" | sed -e "s#\.#_#g")"
 
 export ZOPEN_BUILD_LINE="DEV"
 export ZOPEN_DEV_URL="https://github.com/libexpat/libexpat"
