@@ -21,3 +21,8 @@ totalTests:$totalTests
 expectedFailures:0
 ZZ
 }
+
+zopen_get_version()
+{
+  grep PACKAGE_VERSION expat_config.h | awk -F\" '{ print $2 }'
+}
