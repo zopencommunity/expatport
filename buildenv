@@ -2,6 +2,7 @@
 EXPAT_VERSION="2.5.0"
 EXPAT_UNDER="$(echo "$EXPAT_VERSION" | sed -e "s#\.#_#g")"
 
+export ZOPEN_CATEGORIES="library"
 export ZOPEN_BUILD_LINE="STABLE"
 export ZOPEN_DEV_URL="https://github.com/libexpat/libexpat.git"
 export ZOPEN_DEV_DEPS="git make m4 perl autoconf automake libtool help2man texinfo xz zlib openssl curl gettext gawk zoslib bash"
