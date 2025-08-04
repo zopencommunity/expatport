@@ -27,3 +27,8 @@ zopen_get_version()
 {
   grep PACKAGE_VERSION expat_config.h | awk -F\" '{ print $2 }'
 }
+
+zopen_post_install()
+{
+  cp -r ${PWD}/lib/.libs $ZOPEN_INSTALL_DIR/lib/
+}
