@@ -1,3 +1,5 @@
+[![CodeQL](https://github.com/zopencommunity/expatport/actions/workflows/codeql.yml/badge.svg)](https://github.com/zopencommunity/expatport/actions/workflows/codeql.yml)
+
 [![Automatic version updates](https://github.com/ZOSOpenTools/expatport/actions/workflows/bump.yml/badge.svg)](https://github.com/ZOSOpenTools/expatport/actions/workflows/bump.yml)
 
 # Expat
